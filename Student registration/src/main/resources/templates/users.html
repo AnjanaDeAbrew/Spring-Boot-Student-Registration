@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudent List</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+  <style>
+    h2{
+      text-align: center;
+      font-family:  "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+      font-size: 50pt;
+    }   button{
+          text-align: center;
+          font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+          font-size:20pt;
+          background-color:#6db3ff;
+          color: white;
+          padding: 10px 50px;
+          border: none;
+          border-radius: 15px;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+    button:hover{
+      background-color: #aee2ff;
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="container-fluid text-center">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1445 59"><path fill="#0099ff" fill-opacity="1" d="M0,32L1440,64L1440,0L0,0Z"></path></svg>
+  <div><h2>Student Registration</h2></div>
+  <div class="m-2">
+    <a class="h3" th:href="@{/users/new}"><button>Add New User</button></a>
+  </div>
+  <div th:if="${message}" class="alert alert-success text-center">
+    [[${message}]]
+
+  </div>
+  <div>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+    <tr height="30">
+      <th>ID</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone No</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="user: ${listUsers}">
+      <tr>
+        <td>[[${user.id}]]</td>
+        <td>[[${user.email}]]</td>
+        <td>[[${user.name}]]</td>
+        <td>[[${user.address}]]</td>
+        <td>[[${user.phone}]]</td>
+        <td><a class="h4 mr-3" th:href="@{'/users/edit/' + ${user.id}}">Edit</a>
+          <a class="h4" th:href="@{'/users/delete/' + ${user.id}}">Delete</a></td>
+
+      </tr>
+
+
+
+    </th:block>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+</body>
+</html>

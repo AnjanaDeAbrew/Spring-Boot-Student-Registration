@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[[${pageTitle}]]</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <style>
+        h2{
+            text-align: center;
+            font-family:  "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+            font-size: 50pt;
+        }
+        input[type=text],input[type=password],input[type=email]{
+        width: 90%;
+        padding: 8px;
+        border: 1px solid #945bff;
+        border-radius: 14px;
+        box-sizing: border-box;
+        resize: vertical;
+        height: 45px;
+    }
+    ::placeholder{
+        color: grey;
+        text-align: left;
+    }
+
+    button[type=submit] {
+        background-color:#945bff;
+        color: white;
+        padding: 10px 50px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+        font-size: 14pt;
+        transition: 0.5s;
+
+    }
+    button[type=submit]:hover
+    {
+        background-color: rgba(219,172,255,0.55);
+    }
+        button[type=reset] {
+            background-color:rgba(4,1,2,0.61);
+            color: white;
+            padding: 10px 50px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+            font-size: 14pt;
+            transition: 0.6s;
+
+        }
+        button[type=reset]:hover
+        {
+            background-color:  rgba(0,0,0,0.27);
+        }
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#945bff" fill-opacity="1" d="M0,32L120,32C240,32,480,32,720,42.7C960,53,1200,75,1320,85.3L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg>
+<div class="container-fluid">
+
+    <div class="text-center"><h2>[[${pageTitle}]]</h2></div>
+    <br><br><br>
+
+    <form action="#" th:action="@{/users/save}" th:object="${user}" method="post"
+    style="max-width: 550px; margin: 0 auto;">
+        <input type="hidden" th:field="*{id}">
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Email</label>
+                <div class="col-sm-8">
+                    <input type="email" th:field="*{email}" class="form-control" placeholder="example@gmail.com" required minlength="8" maxlength="45"/>
+                </div>
+            </div><br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Password</label>
+                <div class="col-sm-8">
+                    <input type="password" th:field="*{password}" class="form-control" placeholder="include #$@&" required minlength="8" maxlength="15"/>
+                </div>
+            </div><br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Name</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{name}" class="form-control" placeholder="example1 exampe2" required minlength="2" maxlength="45"/>
+                </div>
+            </div><br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Address</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{address}" class="form-control" placeholder="No.12/Street,City" required minlength="5" maxlength="45"/>
+                </div>
+            </div><br>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Phone</label>
+                <div class="col-sm-8">
+                    <input type="text" th:field="*{phone}" class="form-control" placeholder="07xxxxxxxx" required minlength="10" maxlength="10"/>
+                </div>
+            </div><br>
+            <div class="text-center">
+                <button type="submit" class="m-2" >Save</button>
+                <button type="reset" class="m-2" onclick="cancelForm()">Cancel</button>
+            </div>
+    </form>
+</div>
+<script type="text/javascript">
+    function cancelForm(){
+        window.location="[[@{/users}]]";
+    }
+
+</script>
+
+</body>
+</html>
