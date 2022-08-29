@@ -1,1 +1,8 @@
-# Spring-Boot-Student-Registration
+# Spring-Boot-Student-Registration![Screenshot 2022-08-29 124628](https://user-images.githubusercontent.com/102325586/187163380-2fa782fe-4d4e-406a-9e4b-889289468e2a.png)
+![Screenshot 2022-08-29 140106](https://user-images.githubusercontent.com/102325586/187163388-e6cf91d7-ddfb-45e7-8a9d-0e22748596dd.png)
+![Screenshot 2022-08-29 140122](https://user-images.githubusercontent.com/102325586/187163394-4fcd275c-04b6-4c14-a0aa-537a0f2a3df0.png)
+![Screenshot 2022-08-29 141519](https://user-images.githubusercontent.com/102325586/187163398-03a143ad-8c8a-44e4-8d0c-2eb0d03ff39f.png)
+![Screenshot 2022-08-29 141552](https://user-images.githubusercontent.com/102325586/187163400-9782e1ae-9919-4f6a-845e-722812f29b67.png)
+![Screenshot 2022-08-29 141650](https://user-images.githubusercontent.com/102325586/187163405-ed1c59f5-c496-4f9b-8866-e373dfb59fb0.png)
+![Screenshot 2022-08-29 141730](https://user-images.githubusercontent.com/102325586/187163408-b577a526-be3f-44e1-8586-638a5e1a076f.png)
+![Screenshot 2022-08-29 141759](https://user-images.githubusercontent.com/102325586/187163412-270ee32d-9733-423e-9173-dc1710aa8fe7.png)
